@@ -21,7 +21,7 @@ type Task = {
 };
 
 export default function HomeScreen() {
-  const [theme, setTheme] = useState<ThemeName>("light");
+  const [theme, setTheme] = useState<ThemeName>("dark");
   const colors: Theme = COLOR_SCHEMES[theme];
   const styles = getStyles(colors);
 
