@@ -4,7 +4,8 @@ import {
   MaterialCommunityIcons,
   SimpleLineIcons,
 } from "@expo/vector-icons";
-import { useState } from "react";
+import AsyncStorage from "@react-native-async-storage/async-storage";
+import { useEffect, useState } from "react";
 import {
   FlatList,
   SafeAreaView,
@@ -21,33 +22,58 @@ type Task = {
 };
 
 export default function HomeScreen() {
-  const [theme, setTheme] = useState<ThemeName>("dark");
+  const [theme, setTheme] = useState<ThemeName>("light");
   const colors: Theme = COLOR_SCHEMES[theme];
   const styles = getStyles(colors);
 
   const [text, setText] = useState<string>("");
-  const [tasks, setTasks] = useState<Task[]>([
-    { title: "Play RDR2", completed: false },
-    { title: "Code React-Native", completed: false },
-  ]);
+  const loadTasksFromStorage = async () => {
+    try {
+      const jsonValue = await AsyncStorage.getItem("@tasks");
+      if (jsonValue != null) {
+        setTasks(JSON.parse(jsonValue));
+      }
+    } catch (err) {
+      console.log("error fetching the tasks");
+    }
+  };
+
+  const saveTasksToStorage = async (tasksToSave: Task[]) => {
+    try {
+      const jsonValue = JSON.stringify(tasksToSave);
+      await AsyncStorage.setItem("@tasks", jsonValue);
+    } catch (err) {
+      console.log("error saving tasks");
+    }
+  };
+
+  useEffect(() => {
+    loadTasksFromStorage();
+  }, []);
+
+  const [tasks, setTasks] = useState<Task[]>([]);
 
   function addTask() {
     console.log("triggered");
     if (!text.trim()) return;
-    setTasks([...tasks, { title: text, completed: false }]);
+    const updatedTasks = [...tasks, { title: text, completed: false }];
+    setTasks(updatedTasks);
+    saveTasksToStorage(updatedTasks);
     setText("");
   }
   function removeTask(index: number) {
     if (tasks.length == 0) return;
-    setTasks(tasks.filter((task, i) => i !== index));
+    const updatedTasks = tasks.filter((task, i) => i !== index);
+    setTasks(updatedTasks);
+    saveTasksToStorage(updatedTasks);
   }
 
   function checkTask(index: number) {
-    setTasks((prev) =>
-      prev.map((task, i) =>
-        i == index ? { ...task, completed: !task.completed } : task
-      )
+    const updatedTasks = tasks.map((task, i) =>
+      i == index ? { ...task, completed: !task.completed } : task
     );
+    setTasks(updatedTasks);
+    saveTasksToStorage(updatedTasks);
   }
 
   return (
