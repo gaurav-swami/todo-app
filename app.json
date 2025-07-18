@@ -1,12 +1,10 @@
 {
   "expo": {
-    "name": "todo-app",
+    "name": "To-Do List",
     "slug": "todo-app",
     "version": "1.0.0",
-    
-    "runtimeVersion": {
-      "policy": "appVersion"
-    },
+
+    "runtimeVersion": "1.0.0",
     "updates": {
       "url": "https://u.expo.dev/8fa888ed-84b8-4256-9c71-337cd404b494",
       "fallbackToCacheTimeout": 0
@@ -22,8 +20,8 @@
 
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/images/adaptive-icon.png",
-        "backgroundColor": "#ffffff"
+        "foregroundImage": "./assets/images/icon.png",
+        "backgroundColor": "#05001E"
       },
       "edgeToEdgeEnabled": true,
       "package": "com.gauravpaliwal.todoapp"
@@ -38,10 +36,14 @@
       [
         "expo-splash-screen",
         {
-          "image": "./assets/images/splash.png",
-          "imageWidth": 200,
+          "image": "./assets/images/splash2.png",
           "resizeMode": "contain",
-          "backgroundColor": "#05001E"
+          "imageWidth": 200,
+          "backgroundColor": "#05001E",
+          "dark": {
+            "image": "./assets/images/splash2.png",
+            "backgroundColor": "#05001E"
+          }
         }
       ]
     ],
