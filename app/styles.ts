@@ -7,8 +7,10 @@ const getStyles = (colors: Theme) =>
       flex: 1,
       padding: 16,
       alignItems: "center",
-      backgroundColor: colors.background,
+
+     backgroundColor: "#05001E"
     },
+    
     inner: {
       flexDirection: "row",
       alignItems: "center",

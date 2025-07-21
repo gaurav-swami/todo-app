@@ -10,8 +10,8 @@ export const COLOR_SCHEMES = {
     completed: "#9CA3AF", // gray-400
   },
   dark: {
-    background: "#0F172A",
-    inputBg: "#1E293B",
+    background: "#05001E",
+    inputBg: "#05001E",
     text: "#F8FAFC",
     border: "#334155",
     primary: "#6366F1",   // indigo-500

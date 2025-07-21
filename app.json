@@ -13,6 +13,7 @@
     "icon": "./assets/images/icon.png",
     "scheme": "todoapp",
     "userInterfaceStyle": "automatic",
+
     "newArchEnabled": true,
     "ios": {
       "supportsTablet": true
