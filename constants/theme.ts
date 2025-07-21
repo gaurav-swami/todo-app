@@ -6,7 +6,7 @@ export const COLOR_SCHEMES = {
     inputBg: "#FFFFFF",
     text: "#111827",
     border: "#D1D5DB",
-    primary: "#3B82F6",   // blue-500
+    primary: "#3B82F6", // blue-500
     completed: "#9CA3AF", // gray-400
   },
   dark: {
@@ -14,15 +14,16 @@ export const COLOR_SCHEMES = {
     inputBg: "#05001E",
     text: "#F8FAFC",
     border: "#334155",
-    primary: "#6366F1",   // indigo-500
-    completed: "#64748B", // slate-400
+    primary: "#6366F1", // indigo-500
+    completed: "#64748B",
+    //", // slate-400 #f68623
   },
   ocean: {
     background: "#E0F2F1",
     inputBg: "#B2DFDB",
     text: "#004D40",
     border: "#26A69A",
-    primary: "#00897B",   // teal-600
+    primary: "#00897B", // teal-600
     completed: "#4DB6AC",
   },
   sunset: {
@@ -30,7 +31,7 @@ export const COLOR_SCHEMES = {
     inputBg: "#FFEEDB",
     text: "#7C2D12",
     border: "#FDBA74",
-    primary: "#FB923C",   // orange-400
+    primary: "#FB923C", // orange-400
     completed: "#FCD34D", // amber-300
   },
   rose: {
@@ -38,7 +39,7 @@ export const COLOR_SCHEMES = {
     inputBg: "#FBCFE8",
     text: "#881337",
     border: "#F472B6",
-    primary: "#EC4899",   // pink-500
+    primary: "#EC4899", // pink-500
     completed: "#F9A8D4", // pink-300
   },
 };

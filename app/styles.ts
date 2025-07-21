@@ -8,9 +8,9 @@ const getStyles = (colors: Theme) =>
       padding: 16,
       alignItems: "center",
 
-     backgroundColor: "#05001E"
+      backgroundColor: colors.background,
     },
-    
+
     inner: {
       flexDirection: "row",
       alignItems: "center",
@@ -77,6 +77,22 @@ const getStyles = (colors: Theme) =>
     checkIcon: {
       paddingRight: 10,
     },
+    navText: {
+      color: colors.text,
+      fontSize: 22
+    },
+    navBar: {
+      flexDirection: "row",
+      justifyContent: "space-between",
+      alignItems: "center",
+      width: "100%",
+      paddingHorizontal: 16,
+      marginBottom: 23
+    },
+    delIcon:{
+      color: "#e30b0bff",
+      fontSize: 28
+    }
   });
 
 export default getStyles;
