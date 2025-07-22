@@ -24,7 +24,7 @@ type Task = {
 };
 
 export default function HomeScreen() {
-  console.log("fuckeded");
+  console.log("done");
   const [theme, setTheme] = useState<ThemeName>("dark");
   const colors: Theme = COLOR_SCHEMES[theme];
   const styles = getStyles(colors);
@@ -139,6 +139,8 @@ export default function HomeScreen() {
                     )}
                   </TouchableOpacity>
                   <Text
+                    numberOfLines={2}
+                    ellipsizeMode="tail"
                     style={[
                       styles.listText,
                       item.completed && {
@@ -152,8 +154,8 @@ export default function HomeScreen() {
                     {item.title}
                   </Text>
                 </View>
-                <TouchableOpacity onPress={() => removeTask(index)}>
-                  <SimpleLineIcons name="close" size={24} color="#f68623" />
+                <TouchableOpacity onPress={() => removeTask(index)} style={{paddingLeft: 10}}>
+                  <SimpleLineIcons name="close" size={24} color= {colors.primary} />
                 </TouchableOpacity>
               </View>
             );

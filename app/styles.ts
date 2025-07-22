@@ -25,8 +25,8 @@ const getStyles = (colors: Theme) =>
       borderColor: colors.border,
       paddingVertical: 10,
       height: 48,
-      borderTopLeftRadius: 99,
-      borderBottomLeftRadius: 99,
+      borderTopLeftRadius: 13,
+      borderBottomLeftRadius: 13,
       marginBottom: 8,
       color: colors.text,
       backgroundColor: colors.inputBg,
@@ -35,8 +35,8 @@ const getStyles = (colors: Theme) =>
       marginBottom: 8,
       height: 48,
       justifyContent: "center",
-      borderTopRightRadius: 99,
-      borderBottomRightRadius: 99,
+      borderTopRightRadius: 13,
+      borderBottomRightRadius: 13,
       paddingVertical: 10,
       paddingHorizontal: 16,
       borderWidth: 1,
@@ -48,9 +48,17 @@ const getStyles = (colors: Theme) =>
       fontSize: 18,
       color: colors.inputBg,
     },
+    checkTitle: {
+      flexDirection: "row",
+      alignItems: "center",
+      flex: 1,
+    },
     listText: {
       fontSize: 18,
       color: colors.text,
+      flexShrink: 1,
+      maxWidth: "100%",
+      flexWrap: "wrap",
     },
     listView: {
       flex: 1,
@@ -59,27 +67,25 @@ const getStyles = (colors: Theme) =>
     list: {
       flexDirection: "row",
       justifyContent: "space-between",
+      alignItems: "center",
       fontSize: 18,
-      borderRadius: 99,
+      borderRadius: 13,
       width: "100%",
       borderWidth: 1,
       paddingHorizontal: 16,
       borderColor: colors.border,
       paddingVertical: 10,
-      height: 48,
+   
       marginVertical: 8,
       backgroundColor: colors.inputBg,
     },
-    checkTitle: {
-      flexDirection: "row",
-      alignItems: "center",
-    },
+
     checkIcon: {
       paddingRight: 10,
     },
     navText: {
       color: colors.text,
-      fontSize: 22
+      fontSize: 22,
     },
     navBar: {
       flexDirection: "row",
@@ -87,12 +93,12 @@ const getStyles = (colors: Theme) =>
       alignItems: "center",
       width: "100%",
       paddingHorizontal: 16,
-      marginBottom: 23
+      marginBottom: 23,
     },
-    delIcon:{
-      color: "#e30b0bff",
-      fontSize: 28
-    }
+    delIcon: {
+      color: "#f68623",
+      fontSize: 28,
+    },
   });
 
 export default getStyles;
