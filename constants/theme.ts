@@ -6,7 +6,7 @@ export const COLOR_SCHEMES = {
     inputBg: "#FFFFFF",
     text: "#111827",
     border: "#D1D5DB",
-    primary: "#3B82F6", // blue-500
+    primary: "#777e93", // #77e93 #3B82F6
     completed: "#9CA3AF", // gray-400
   },
   dark: {
@@ -14,7 +14,7 @@ export const COLOR_SCHEMES = {
     inputBg: "#05001E",
     text: "#F8FAFC",
     border: "#334155",
-    primary: "#6366F1", // indigo-500
+    primary: "#afb9d4", // indigo-500 #777e93 #6366F1 #afb9d4 #91bdef #83b3e3
     completed: "#64748B",
     //", // slate-400 #f68623
   },

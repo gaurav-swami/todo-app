@@ -92,7 +92,7 @@ export default function HomeScreen() {
           <MaterialIcons
             name="delete-outline"
             style={styles.delIcon}
-            color="#000"
+            
             size={24}
           />
         </TouchableOpacity>
@@ -133,7 +133,7 @@ export default function HomeScreen() {
                     ) : (
                       <MaterialCommunityIcons
                         name="checkbox-blank-circle-outline"
-                        color={colors.text}
+                        color={colors.primary}
                         size={28}
                       />
                     )}
